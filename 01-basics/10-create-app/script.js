@@ -8,7 +8,7 @@ const App = defineComponent({
     var day = new Date();
     
     return {
-      today: day.toLocaleDateString('ru-RU', { dateStyle: 'long' })
+      today: day.toLocaleDateString('en-US', { dateStyle: 'long' })
     }
   },
 
