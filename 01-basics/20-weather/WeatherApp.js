@@ -14,16 +14,8 @@ export default defineComponent({
       return  parseInt(Math.round(hPa*0.75));
     }
 
-    function isNight(currentHourText, sunriseArrayText, sunsetArrayText) {
-
-      var currentHourArray = currentHourText.split(":");
-      var sunriseArray = sunriseArrayText.split(":")
-      var sunsetArray = sunsetArrayText.split(":")
-
-      const currentHour = currentHourArray[0]*60+currentHourArray[1]
-      const sunrise = sunriseArray[0]*60+sunriseArray[1]
-      const sunset = sunsetArray[0]*60+sunsetArray[1]
-      
+    function isNight(currentHour, sunrise, sunset) {
+    
       return currentHour < sunrise && currentHour > sunset;
       }
      
