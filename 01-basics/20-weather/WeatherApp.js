@@ -15,8 +15,8 @@ export default defineComponent({
     }
 
     function isNight(currentHour, sunrise, sunset) {
-    
-      return currentHour < sunrise && currentHour > sunset;
+
+      return currentHour < sunrise || currentHour > sunset;
       }
      
 
@@ -34,7 +34,7 @@ export default defineComponent({
   <h1 class="title">Погода в Средиземье</h1>
 
   <ul class="weather-list unstyled-list">
-  <li v-for="data in weatherData" v-bind:class="{ 'weather-card': true, 'weather-card--night': isNight(data.current.dt, data.current.sunrise, data.current.sunset) }">
+  <li v-for="data in weatherData" class="weather-card" :class="{ 'weather-card--night': isNight(data.current.dt, data.current.sunrise, data.current.sunset) }">
       <div class="weather-alert" v-if="data.alert != null">
         <span class="weather-alert__icon">⚠️</span>
         <span class="weather-alert__description">{{ data.alert.sender_name }}:{{ data.alert.description }}</span>
