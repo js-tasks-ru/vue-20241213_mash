@@ -16,7 +16,7 @@ export default defineComponent({
 
     function isNight(currentHour, sunrise, sunset) {
 
-      return currentHour < sunrise || currentHour > sunset;
+      return currentHour < sunrise ||currentHour > sunset;
       }
      
 
