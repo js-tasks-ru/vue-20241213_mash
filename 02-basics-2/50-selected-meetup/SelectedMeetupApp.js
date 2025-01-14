@@ -17,6 +17,7 @@ export default defineComponent({
 
     watch(selectedId, (newId) => {
       fetchMeetupTitle(newId);
+      
     });
 
 
