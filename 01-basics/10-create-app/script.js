@@ -4,7 +4,7 @@ const App = defineComponent({
     name: 'app',
     
     setup() {
-  
+  й
     var day = new Date();
     
     return {
